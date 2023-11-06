@@ -24,7 +24,7 @@ public class LightsOutGameInterface extends JFrame {
     private static int levelDifficulty = 3;
 
     private JPanel panel;
-    File file = new File("/Users/fodepixofarfan/Downloads/T4/data/top10.txt");
+    File file = new File("data/top10.txt");
     public LightsOutGameInterface() {
 
         onOffMatrix = new Tablero(matrixSize);
@@ -248,7 +248,7 @@ public class LightsOutGameInterface extends JFrame {
                 emoji = "\uD83D\uDE41" + " ";
             }
             String[] splitString = value.toString().replace(".","").split(" ");
-            setText(emoji+" "+(index + 1)+".   "+splitString[0]+"   " +splitString[2]);
+            setText(emoji+" "+(index + 1)+".   "+splitString[0]+" :   " +splitString[2]);
 
             if (index < 3) {
                 setFont(getFont().deriveFont(Font.BOLD));
